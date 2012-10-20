@@ -15,6 +15,21 @@ Run the site with
   jekyll --auto --server
 
 
+## Outstanding Tasks
+
+Stuff we still need to do:
+
+- Responsive layouts
+- Wire-up S3 account for assets
+- Google Analytics
+- Discuss comments Proof of Concept
+- Share buttons
+- RSS/Atom feeds
+- Tag/Category pages
+- Gravatar authors for profile pictures
+- Wire-up DNS to point to 100shapes.github.com
+
+
 # Usage
 
 For all usage and documentation please see: <http://jekyllbootstrap.com>
