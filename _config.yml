@@ -1,8 +1,8 @@
 # This is the default format. 
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: none  
+permalink: /:categories/:title.html
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "Gemfile", "Gemfile.lock"]
+exclude: ['README.md', 'Rakefile', 'Gemfile', 'Gemfile.lock', '.gitignore']
 auto: true
 pygments: false
 
@@ -14,9 +14,9 @@ tagline: We designs apps
 author :
   name : Michele Memoli
   email : michele@100shapes.com
-  #github : redmonkey
-  #twitter : username
-  #feedburner : feedname
+  github : redmonkey
+  # twitter : username
+  # feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -26,12 +26,12 @@ author :
 # Else if you are pushing to username.github.com, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://100shapes.com
+production_url : http://username.github.com
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
-OHS :
-  version : 0.1.1
+JB :
+  version : 0.2.13
 
   # All links will be namespaced by BASE_PATH if defined.
   # Links in your website should always be prefixed with {{BASE_PATH}}
@@ -70,16 +70,16 @@ OHS :
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change theme here if needed.
   #
-  #archive_path: /archive.html
-  #categories_path : /categories.html
-  #tags_path : /tags.html
+  archive_path: /archive.html
+  categories_path : /categories.html
+  tags_path : /tags.html
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
   # Set 'provider' to false to turn commenting off globally.
   #
-  # comments :
-  #   provider : disqus
+  comments :
+    provider : false
   #   disqus :
   #     short_name : jekyllbootstrap
   #   livefyre :
@@ -96,10 +96,10 @@ OHS :
   # Set 'provider' to the analytics provider you want to use.
   # Set 'provider' to false to turn analytics off globally.
   #        
-  # analytics :
-  #   provider : google 
-  #   google : 
-  #       tracking_id : 'UA-123-12'
+  analytics :
+    provider : false 
+    google : 
+        tracking_id : 'UA-123-12' # OVERRIDE
     # getclicky :
     #   site_id : 
     # mixpanel :
@@ -110,8 +110,8 @@ OHS :
   # Set 'provider' to the sharing provider you want to use.
   # Set 'provider' to false to turn sharing off globally.
   #
-  # sharing :
-  #   provider : false
+  sharing :
+    provider : false
 
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:

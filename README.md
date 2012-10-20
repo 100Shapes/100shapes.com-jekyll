@@ -29,7 +29,7 @@ When you've got `bundler`, install all the gems you need with
 
 You've now got everything you need, so run the site with an autoreloading server:
 
-  jekyll --auto --server
+  jekyll --server
 
 
 ## Outstanding Tasks
