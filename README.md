@@ -4,16 +4,7 @@ Hi, we're 100shapes. We build apps and websites.
 
 ## How do I write posts?
 
-They are two ways:
-
-- using a shell
-- copying a file
-
-If you're ok with the shell, run:
-
-	rake post title="test post" date="2012-10-20"
-
-Otherwise, duplicate a post from `_posts/` and edit it. 
+Duplicate a post from `_posts/`, Rename it, and edit. 
 
 ## Local Development
 
