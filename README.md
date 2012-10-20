@@ -1,16 +1,33 @@
-# Local Development
+# Welcome…
 
-Make sure you've got RVM installed. Then you can create a gemset.
+Hi, we're 100shapes. We build apps and websites.
 
-Install `bundler` so that if can manage you gems:
+## How do I write posts?
 
-	gem install bundler
+They are two ways:
 
-When you've got `bundler`, you can install all the gems you need with
+- using a shell
+- copying a file
+
+If you're ok with the shell, run:
+
+	rake post title="test post" date="2012-10-20"
+
+Otherwise, duplicate a post from `_posts/` and edit it. 
+
+## Local Development
+
+This site is built using Jekyll and hosted on github. In order to run it locally, you need to have `jekyll` installed. It's a Ruby gem, so install it how you want. We recommend installing `RVM` and `bundler`, that way you can have a gemset just for this site.
+
+Once you're using your gemset, Install `bundler` so that if can manage you gems:
+
+  gem install bundler
+
+When you've got `bundler`, install all the gems you need with
 
 	bundle install
 
-Run the site with
+You've now got everything you need, so run the site with an autoreloading server:
 
   jekyll --auto --server
 
