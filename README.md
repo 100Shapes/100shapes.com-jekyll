@@ -10,7 +10,9 @@ When you've got `bundler`, you can install all the gems you need with
 
 	bundle install
 
-Done.
+Run the site with
+
+  jekyll --auto --server
 
 
 # Usage
