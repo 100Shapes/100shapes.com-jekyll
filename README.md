@@ -1,8 +1,19 @@
-# Jekyll-Bootstrap
+# Local Development
 
-The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
+Make sure you've got RVM installed. Then you can create a gemset.
 
-## Usage
+Install `bundler` so that if can manage you gems:
+
+  gem install bundler
+
+When you've got `bundler`, you can install all the gems you need with
+
+  bundle install
+
+Done.
+
+
+# Usage
 
 For all usage and documentation please see: <http://jekyllbootstrap.com>
 
