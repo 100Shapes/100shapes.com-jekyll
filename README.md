@@ -4,11 +4,11 @@ Make sure you've got RVM installed. Then you can create a gemset.
 
 Install `bundler` so that if can manage you gems:
 
-  gem install bundler
+	gem install bundler
 
 When you've got `bundler`, you can install all the gems you need with
 
-  bundle install
+	bundle install
 
 Done.
 
