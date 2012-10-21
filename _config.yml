@@ -1,8 +1,9 @@
-permalink: /:categories/:title.html
+permalink: /blog/:categories/:title.html
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
 
 exclude: ['README.md', 'Rakefile', 'Gemfile', 'Gemfile.lock', '.gitignore']
 auto: true
+safe: true
 
 title : 100Shapes
 tagline: We designs apps
