@@ -5,6 +5,8 @@ exclude: ['README.md', 'Rakefile', 'Gemfile', 'Gemfile.lock', '.gitignore']
 auto: true
 safe: true
 
+default_lang: en
+
 title : 100Shapes
 tagline: We designs apps
 
