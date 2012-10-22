@@ -63,7 +63,6 @@ Stuff we still need to do:
 - Google Analytics
 - Discuss comments Proof of Concept
 - Share buttons
-- RSS/Atom feeds
 - Tag/Category pages
 - Gravatar authors for profile pictures
 - Wire-up DNS to point to s3 bucket
