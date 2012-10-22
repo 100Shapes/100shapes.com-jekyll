@@ -50,7 +50,7 @@ Duplicate a post from `_posts/`, rename it, and edit. Posts are organised into d
 How do I publish?
 -----------------
 
-Setup the s3 vars, then run `jekyll-s3`.
+<!-- Setup the s3 vars, then run `jekyll-s3`. -->
 
 
 Outstanding Tasks
