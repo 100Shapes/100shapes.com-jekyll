@@ -1,40 +1,60 @@
-# Welcome…
+100Shapes site
+==============
 
-Hi, we're 100shapes. We build apps and websites.
 
-## Where are all the posts?
+Hey, we're 100shapes. We build apps and websites. This is the conversion engine we're using to build our site at [100shapes.com](www.100shapes.com).
 
-Our posts live on our Google Drive: `blog/`. You need to symlink that directory here.
+First things first: we're not hosting the site with GitHub Pages. We'd like to, but we like being able to run custom plugins more. This repository holds our engine only – the thing that converts markdown to html.
 
-	cd :project_dir/
-	ln -s :path/to/Google\ Drive/blog/ _posts
+The engine we're using is `Jekyll` written in Ruby. We've choosen it because there's a massive community and it seems to just work.
 
-Note: Remember to escape the spaces.
+Jekyll works by passing any markdown files within `posts/` through a series of templates to create a `site/` directory. `site/` is the directory that holds our site. Every time a new post is added, we need to regenerate it.
 
-When it works, you should see `_posts/` in the project root dir.
+Getting set up
+--------------
 
-## How do I write posts?
+ In order to run it locally, you need to have Jekyll installed. It's a Ruby gem, so install it how you want. We recommend installing Ruby's `RVM` and `bundler` first so that you can have a gemset just for this site.
 
-Duplicate a post from `_posts/`, Rename it, and edit. 
-
-## Local Development
-
-This site is built using Jekyll and hosted on github. In order to run it locally, you need to have `jekyll` installed. It's a Ruby gem, so install it how you want. We recommend installing `RVM` and `bundler`, that way you can have a gemset just for this site.
-
-Once you're using your gemset, Install `bundler` so that if can manage you gems:
+Once you're using your gemset, Install `bundler` so that it can manage your gems:
 
 	gem install bundler
 
-When you've got `bundler`, install all the gems you need with
+`bundler` is cool because it looks at at gems you've got listed in the `Gemfile` and installs them for you. Grab everything you need with:
 
 	bundle install
 
-You've now got everything you need, so run the site with an autoreloading server:
+You've now got everything you need, so run the site server:
 
 	jekyll --server
 
 
-## Outstanding Tasks
+Where are all the posts?
+------------------------
+
+Once you clone this repo, you'll notice it doesn't include `posts/`. That's because they live on our Google Drive in `blog/`. You need to symlink that directory here:
+
+	cd :project_dir/
+	ln -s :path/to/Google\ Drive/blog/ _posts
+
+**Note:** Remember to escape the spaces.
+
+When it works, you'll see `_posts/` and Jekyll can do its thing.
+
+
+How do I write posts?
+---------------------
+
+Duplicate a post from `_posts/`, Rename it, and edit. Posts are organised into directories in `site/` based on the categories you include in the post's Metadata.
+
+
+How do I publish?
+-----------------
+
+Run `jekyll-s3`
+
+
+Outstanding Tasks
+-----------------
 
 Stuff we still need to do:
 
@@ -46,44 +66,5 @@ Stuff we still need to do:
 - RSS/Atom feeds
 - Tag/Category pages
 - Gravatar authors for profile pictures
-- Wire-up DNS to point to 100shapes.github.com
+- Wire-up DNS to point to s3 bucket
 
-
-# Usage
-
-For all usage and documentation please see: <http://jekyllbootstrap.com>
-
-## Version
-
-0.2.13 - stable and versioned using [semantic versioning](http://semver.org/).
-
-## Contributing 
-
-This repository tracks 2 projects:
-
-- **Jekyll-Bootstrap Framework.**  
-	The framework for which users should clone and build their blog on top of is available in the master branch.
-	
-	To contribute to the framework please make sure to checkout your branch based on `jb-development`!!
-	This is very important as it allows me to accept your pull request without having to publish a public version release.
-	
-	Small, atomic Features, bugs, etc.   
-	Use the `jb-development` branch but note it will likely change fast as pull requests are accepted.   
-	Please rebase as often as possible when working.   
-	Work on small, atomic features/bugs to avoid upstream commits affecting/breaking your development work.
-	
-	For Big Features or major API extensions/edits:   
-	This is the one case where I'll accept pull-requests based off the master branch.
-	This allows you to work in isolation but it means I'll have to manually merge your work into the next public release.
-	Translation : it might take a bit longer so please be patient! (but sincerely thank you).
- 
-- **Jekyll-Bootstrap Documentation Website.**    
-	The documentation website at <http://jekyllbootstrap.com> is maintained in the gh-pages branch.
-	Please fork and contribute documentation additions to this branch only.
-
-The master and gh-pages branch do not share the same ancestry. Please treat them as completely separate git repositories!
-
-
-## License
-
-[Creative Commons](http://creativecommons.org/licenses/by-nc-sa/3.0/)
