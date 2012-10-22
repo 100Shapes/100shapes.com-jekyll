@@ -1,4 +1,4 @@
-permalink: /blog/:categories/:title.html
+permalink: /:categories/:title/
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
 
 exclude: ['README.md', 'Rakefile', 'Gemfile', 'Gemfile.lock', '.gitignore']
