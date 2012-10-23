@@ -41,6 +41,48 @@ Once you clone this repo, you'll notice it doesn't include `posts/`. That's beca
 When it works, you'll see `_posts/` and Jekyll can do its thing.
 
 
+The Posts and the Media Problem
+-------------------------------
+
+So our blog has lots of media (it's image heavy). We can't put all this into the repo – we need to use an Amazon S3 account to host it instead.
+
+Ideally, we'd like the have this structure:
+
+	blog/
+		:post_1_title/
+			2012-10-20-:post-1-title.md
+			dogs.jpg
+			dogs_large.jpg
+			script.js
+			script.coffee
+
+		:post_2_title/
+			2012-10-20-:post-2-title.md
+			cats.jpg
+			script.js
+			script.coffee
+			cats_vid.m4a
+
+The problem is that `blog/` is symlinked into the project as `_posts/` so that Jekyll can use it. However, Jekyll only converts files in `_posts` which have a filename like:
+
+	2012-10-20-my-post-title.md
+
+Everything else is ignored, even the directory structure. This is because it eventually builds the directory based on the categories you specify in the posts.
+
+We have no way to tell Jekyll to copy everything over.
+
+
+### Unsuccessful Things
+
+- I created a `post_assets/` on our drive and tried symlinking it into `assets/` within the project root. Jekyll ignored it.
+- I tried symlinking to `post_assets/` directly from the project root. Jekyll ignored it
+
+It seems Jekyll ignores symlinks except when `posts/` is itself, a symlink.
+
+### More Suggestions
+
+- Abandon Jekyll and use Python's Pelican – it's less fussy about what it chooses to convert.
+
 How do I write posts?
 ---------------------
 
@@ -50,7 +92,6 @@ Duplicate a post from `_posts/`, rename it, and edit. Posts are organised into d
 How do I publish?
 -----------------
 
-<!-- Setup the s3 vars, then run `jekyll-s3`. -->
 
 
 Outstanding Tasks
